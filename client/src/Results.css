@@ -1,0 +1,66 @@
+.results .title {
+  font-size: clamp(1.75rem, 5vw, 2rem);
+  font-weight: 800;
+  margin: 0 0 0.25rem;
+}
+
+.results .subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.score-row.you {
+  border-color: var(--accent);
+  background: rgba(0, 212, 170, 0.1);
+}
+
+.score-row.p1 .score {
+  color: var(--p1);
+  font-weight: 700;
+}
+
+.score-row.p2 .score {
+  color: var(--p2);
+  font-weight: 700;
+}
+
+.result-message {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  color: var(--text);
+}
+
+.results .btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+}
+
+.results .btn-primary:hover {
+  background: var(--accent-dim);
+  box-shadow: 0 4px 20px rgba(0, 212, 170, 0.35);
+}

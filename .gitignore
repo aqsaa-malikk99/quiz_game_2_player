@@ -1,0 +1,9 @@
+node_modules/
+dist/
+server/public/
+server/.env
+.env
+client/vite
+client/quiz-game-client@1.0.0
+*.log
+.DS_Store

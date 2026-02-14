@@ -1,0 +1,119 @@
+.screen {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+}
+
+.connecting,
+.generating {
+  color: var(--muted);
+}
+
+.connecting h1,
+.generating h2 {
+  color: var(--text);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.connecting p,
+.generating p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.connecting code {
+  background: var(--surface);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.connection-message {
+  margin-bottom: 0.5rem !important;
+}
+
+.connection-url {
+  margin-top: 1rem !important;
+  color: var(--muted);
+  font-size: 0.85rem !important;
+}
+
+.connection-tip {
+  margin-top: 1rem !important;
+  font-size: 0.9rem !important;
+  color: var(--accent);
+}
+
+.connecting-error {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  border: 3px solid var(--danger);
+  background: rgba(255, 107, 107, 0.2);
+}
+
+.opponent-left h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.opponent-left p {
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+}
+
+.pulse {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 1.5rem;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 107, 107, 0.15);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius);
+  color: var(--danger);
+  font-size: 0.9rem;
+}
+
+.error-banner button {
+  background: none;
+  color: inherit;
+  font-size: 1.25rem;
+  padding: 0 0.25rem;
+  line-height: 1;
+}
+
+.error-banner button:hover {
+  opacity: 0.8;
+}

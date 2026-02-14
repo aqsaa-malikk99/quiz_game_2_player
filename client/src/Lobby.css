@@ -1,0 +1,136 @@
+.lobby .title {
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 800;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.lobby .subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0 0 2rem;
+}
+
+.player-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.player-badge[data-player="p1"] {
+  background: rgba(108, 158, 255, 0.2);
+  color: var(--p1);
+}
+
+.player-badge[data-player="p2"] {
+  background: rgba(255, 159, 108, 0.2);
+  color: var(--p2);
+}
+
+.slots {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.slot {
+  width: 120px;
+  padding: 1rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slot.filled {
+  border-color: var(--accent-dim);
+  background: rgba(0, 212, 170, 0.06);
+}
+
+.slot-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.slot-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.slot-dot.p1 { background: var(--p1); }
+.slot-dot.p2 { background: var(--p2); }
+
+.slot-empty {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.slot-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.room-code {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  color: var(--accent);
+  margin: 0.5rem 0 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.lobby .hint {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+.url-hint {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: var(--surface);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  word-break: break-all;
+}
+
+.btn {
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-dim);
+  box-shadow: 0 4px 20px rgba(0, 212, 170, 0.35);
+}
+
+.btn-primary:disabled {
+  background: var(--border);
+  color: var(--muted);
+}
